@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #304352, #212F45);
+}
+
+.App {
+  text-align: center;
+}
+
+.glass-header {
+  background: rgba(33, 97, 140, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.glass-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-header li {
+  margin-right: 20px;
+}
+
+.glass-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.glass-hero {
+  background: rgba(33, 97, 140, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.glass-hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.glass-hero p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2980b9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1a5276;
+}
+
+.glass-section {
+  background: rgba(33, 97, 140, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.glass-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.glass-footer {
+  background: rgba(33, 97, 140, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.glass-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.glass-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-footer li {
+  margin-left: 20px;
+}
+
+.glass-footer a {
+  background: rgba(33, 97, 140, 0.5);
+  text-decoration: none;
+}
