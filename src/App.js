@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Cards from './CardGrid';
 import './App.css';
 
 const App = () => {
@@ -34,6 +35,11 @@ const App = () => {
             </ul>
           </nav>
         </header>
+        <div className="hero-content">
+                <h1>Welcome to the Glassmorphic Material Design UI</h1>
+                <p>Stay updated with the latest esports tournaments, teams, players, and news.</p>
+              </div>
+              <Cards />
 
         <Routes>
           <Route path="/" element={
@@ -43,14 +49,8 @@ const App = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="hero-content">
-                <h1>Welcome to the Glassmorphic Material Design UI</h1>
-                <p>Stay updated with the latest esports tournaments, teams, players, and news.</p>
-                <Link to="#" className="btn">Get Started</Link>
-              </div>
             </motion.section>
           } />
-
           <Route path="/tournaments" element={
             <motion.section
               className="glass-section"

@@ -1,27 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --foreground: #CDD6F4;
+  --background: linear-gradient(to bottom right, #282c43, #1e2033);
+  --selection-foreground: #1E1E2E;
+  --selection-background: #F5E0DC;
+  --accent-color: #B4BEFE;
+  --text-color: #6C7086;
+  --highlight-color: #F9E2AF;
+  --primary-color: #74C7EC;
+  --dark-background: #45475A;
+  --dark-text: #585B70;
+  --secondary-color: #F38BA8;
+  --success-color: #A6E3A1;
+  --warning-color: #F9E2AF;
+  --info-color: #89B4FA;
+  --error-color: #F5C2E7;
+  --light-success-color: #94E2D5;
+  --light-background: #BAC2DE;
+  --light-text: #A6ADC8;
+  --dark-blue-pastel: #5C6B7A;
+}
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom right, #304352, #212F45);
-}
-
-.App {
-  text-align: center;
+  background: linear-gradient(to bottom right, var(--foreground), var(--background));
+  color: var(--text-color);
 }
 
 .glass-header {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.glass-header a {
+  color: var(--foreground);
+}
+
+.glass-hero h1 {
+  color: var(--foreground);
+}
+
+.glass-hero p {
+  color: var(--foreground);
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: var(--foreground);
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+.glass-section {
+  background: linear-gradient(to bottom right, var(--foreground), var(--background));
+}
+
+.glass-section h2 {
+  color: var(--foreground);
+}
+
+.glass-footer {
   background: rgba(33, 97, 140, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+}
+
+.glass-footer p {
+  color: var(--foreground);
+}
+
+.glass-footer a {
+  background: rgba(33, 97, 140, 0.5);
 }
 
 .glass-header ul {
@@ -36,47 +94,35 @@ body {
   margin-right: 20px;
 }
 
-.glass-header a {
-  color: #fff;
-  text-decoration: none;
-}
-
 .glass-hero {
-  background: rgba(33, 97, 140, 0.5);
   backdrop-filter: blur(10px);
   padding: 100px 20px;
   text-align: center;
   margin-top: 80px;
 }
 
-.glass-hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
 .glass-hero p {
   font-size: 18px;
-  color: #ddd;
+  color: var(--text-color);
   margin-bottom: 40px;
 }
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #2980b9;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--foreground);
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #1a5276;
+  background-color: var(--primary-color);
 }
 
 .glass-section {
-  background: rgba(33, 97, 140, 0.5);
+  background: linear-gradient(to bottom right, var(--foreground), var(--background));
   backdrop-filter: blur(10px);
   padding: 40px 20px;
   margin-bottom: 40px;
@@ -88,7 +134,7 @@ body {
 .glass-section h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--foreground);
 }
 
 .glass-footer {
@@ -103,7 +149,7 @@ body {
 .glass-footer p {
   margin: 0;
   font-size: 14px;
-  color: #fff;
+  color: var(--foreground);
 }
 
 .glass-footer ul {
@@ -121,4 +167,17 @@ body {
 .glass-footer a {
   background: rgba(33, 97, 140, 0.5);
   text-decoration: none;
+  color: var(--foreground);
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.glass-footer a:hover {
+  background-color: var(--primary-color);
+}
+
+.glass-footer svg {
+  width: 20px;
+  height: 20px
 }
