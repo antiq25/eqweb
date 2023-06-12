@@ -1,0 +1,63 @@
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 3.5px #fff,
+        0 0 5px #fff,
+        0 0 10.5px #fff,
+        0 0 21px #bc13fe,
+        0 0 41px #bc13fe,
+        0 0 46px #bc13fe,
+        0 0 51px #bc13fe,
+        0 0 75.5px #bc13fe;
+    font-size: 3.1rem;
+    animation: pulsate 1.5s infinite alternate;  
+    border: 0.1rem solid #fff;
+    border-radius: 1rem;
+    padding: 0.2em;
+    box-shadow: 0 0 .5rem #fff,
+                0 0 .5rem #fff,
+                0 0 2rem #bc13fe,
+                0 0 0.6rem #bc13fe,
+                0 0 11.4rem #bc13fe,
+                inset 0 0 0.65rem #bc13fe; 
+    text-align: center;
+    font-weight: 400;
+}
+
+.container {
+    font-family: "Sacramento", sans-serif;
+    background-color: #010a0100;
+    display: flex;
+    width: 50%;
+    margin: 2%;
+}
+
+@keyframes pulsate {
+
+    100% {
+
+        text-shadow:
+        0 0 10px #fff,
+        0 0 5.5px #fff,
+        0 0 9.5px #fff,
+        0 0 20px #bc13fe,
+        0 0 40px #bc13fe,
+        0 0 45px #bc13fe,
+        0 0 50px #bc13fe,
+        0 0 75px #bc13fe;
+
+    }
+
+    0% {
+
+        text-shadow:
+        0 0 1px #fff,
+        0 0 2px #fff,
+        0 0 3px #fff,
+        0 0 5px #bc13fe,
+        0 0 22.5px #bc13fe,
+        0 0 27.5px #bc13fe,
+        0 0 35px #bc13fe,
+        0 0 40px #bc13fe;
+    }
+}

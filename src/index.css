@@ -1,7 +1,8 @@
 
 :root {
-  --foreground: #CDD6F4;
+  --foreground: #ffffff;
   --background: linear-gradient(to bottom right, #282c43, #1e2033);
+  --background2: linear-gradient(to bottom right, #282c43, #1e2033, .25);
   --selection-foreground: #1E1E2E;
   --selection-background: #F5E0DC;
   --accent-color: #B4BEFE;
@@ -21,28 +22,82 @@
   --dark-blue-pastel: #5C6B7A;
 }
 
+/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+  .container {
+      padding: 5px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 601px to 767px) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  body {
+      font-size: 16px;
+  }
+  .container {
+      padding: 10px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+      font-size: 18px;
+  }
+  .container {
+      padding: 15px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+      font-size: 20px;
+  }
+  .container {
+      padding: 20px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+      font-size: 22px;
+  }
+  .container {
+      padding: 25px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
+
 html {
-  background: var(--background);
+  background: var(--background2);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom right, var(--foreground), var(--background));
+  font-family: 'SFNSMono Nerd Font', monospace;
+  background: var(--background);
   color: var(--text-color);
 }
 
-.glass-header {
-  background: rgba(0, 0, 0, 0.18);
+h1 {
+  font-size:25px;
+  padding: 5px;
+  margin:2%;
+  color:white;
 }
-
 .glass-header a {
-  color: var(--foreground);
+  color: var(--foreground);;
 }
 
 .glass-hero h1 {
@@ -54,7 +109,6 @@ body {
 }
 
 .btn {
-  background-color: var(--accent-color);
   color: var(--foreground);
 }
 
@@ -63,7 +117,7 @@ body {
 }
 
 .glass-section {
-  background: linear-gradient(to bottom right, var(--foreground), var(--background));
+  background: var(--background2);
 }
 
 .glass-section h2 {
@@ -71,7 +125,7 @@ body {
 }
 
 .glass-footer {
-  background: rgba(33, 97, 140, 0.5);
+  background: linear-gradient(to bottom right, #282c43, #1e2033, 0.25);
 }
 
 .glass-footer p {
@@ -122,7 +176,7 @@ body {
 }
 
 .glass-section {
-  background: linear-gradient(to bottom right, var(--foreground), var(--background));
+  background: linear-gradient(to bottom right, #282c43, #1e2033, 0.25);
   backdrop-filter: blur(10px);
   padding: 40px 20px;
   margin-bottom: 40px;
@@ -138,10 +192,9 @@ body {
 }
 
 .glass-footer {
-  background: rgba(33, 97, 140, 0.5);
+  background: linear-gradient(to bottom right, #282c43, #1e2033, 0.25);
   backdrop-filter: blur(10px);
   padding: 20px;
-  position: sticky;
   bottom: 0;
   z-index: 1;
 }
@@ -165,7 +218,7 @@ body {
 }
 
 .glass-footer a {
-  background: rgba(33, 97, 140, 0.5);
+  background: linear-gradient(to bottom right, #282c43, #1e2033, 0.25);
   text-decoration: none;
   color: var(--foreground);
   padding: 5px;
@@ -174,10 +227,15 @@ body {
 }
 
 .glass-footer a:hover {
-  background-color: var(--primary-color);
+  background: linear-gradient(to bottom right, #282c43, #1e2033, 0.25);
 }
 
 .glass-footer svg {
   width: 20px;
   height: 20px
+}
+
+.pClassSpan {
+  font-size: 11px;
+  font-weight: lighter;
 }

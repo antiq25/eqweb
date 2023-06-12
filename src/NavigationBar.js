@@ -1,35 +1,44 @@
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import './index.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './NaviBar.css';
+import logo from './eq.png';
 
-function NavigationBar() {
-    const [show, setShow] = useState(false);
-    
-    const handleToggle = () => {
-      setShow(!show);
-    }
+const NavigationBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-      <Navbar expand="lg" className="navigation-bar">
-        <Navbar.Brand href="#home">My Website</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle}>
-          <FontAwesomeIcon icon={faBars} />
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <NavDropdown title="Services" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#service1">Service 1</NavDropdown.Item>
-              <NavDropdown.Item href="#service2">Service 2</NavDropdown.Item>
-              <NavDropdown.Item href="#service3">Service 3</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  }
-  
-  export default NavigationBar;
+  return (
+    <nav className="navbar">
+      <img src={logo} alt="logo" className="navbar-logo" />
+      <div onClick={() => setIsOpen(!isOpen)} className="navbar-hamburger">
+        <div className={isOpen ? "line1" : ""}></div>
+        <div className={isOpen ? "line2" : ""}></div>
+        <div className={isOpen ? "line3" : ""}></div>
+      </div>
+      <ul className={isOpen ? "navbar-links open" : "navbar-links"}>
+        <li className="navbar-item">
+          <Link to="/" className="navbar-link">Home</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/tournaments" className="navbar-link">Merchandise</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/teams" className="navbar-link">Teams</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/players" className="navbar-link">Staff</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/news" className="navbar-link">News</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/about" className="navbar-link">About</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/contact" className="navbar-link">Contact</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default NavigationBar;

@@ -3,6 +3,7 @@ import './Cards.css'; // Assuming the CSS is stored in a file named Cards.css
 
 const Cards = () => {
   return (
+    <div className="container">
     <div className="cards">
       <div className="card content">
         <div className="card-content">
@@ -11,7 +12,7 @@ const Cards = () => {
           </div>
           <div className="card-label">E-Sports</div>
           <div className="card-title">
-            Fnatic raises $19 million, shakes up leadership team
+            Eclectiq Esports wins Katowice 2025 Major
           </div>
         </div>
       </div>
@@ -24,7 +25,7 @@ const Cards = () => {
             Technology
           </div>
           <div className="card-title">
-            Google Stadia: The Future of Gaming
+            How the EQ Team made 50 billion in the year of 2024
           </div>
         </div>
       </div>
@@ -37,13 +38,14 @@ const Cards = () => {
             Consoles
           </div>
           <div className="card-title">
-            PS5 won't launch before mid-2020
+        
           </div>
         </div>
       </div>
       <div className="card form">
         <div className="form-title">Sign Up</div>
       </div>
+    </div>
     </div>
   );
 };
